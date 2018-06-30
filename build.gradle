@@ -2,6 +2,9 @@
 
 buildscript {
     ext.kotlin_version = '1.2.50'
+    ext.rx_java_verstion = '2.1.8'
+    ext.rx_android = '2.0.1'
+
     repositories {
         google()
         jcenter()
@@ -23,6 +26,7 @@ allprojects {
         jcenter()
         mavenLocal()
         maven { url "https://plugins.gradle.org/m2/" }
+        maven { url "https://jitpack.io" }
     }
 }
 

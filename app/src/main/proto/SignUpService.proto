@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_generic_services = true;
+package com.example.learn;
+
+message SignUpRequest {
+    string name = 1;
+    string username = 2;
+    string password = 3;
+}
+
+message SignUpResponse {
+    int32 responseCode = 1;
+    string message = 2;
+}
+
+service SignUpService {
+    rpc signUp (SignUpRequest) returns (SignUpResponse);
+}
